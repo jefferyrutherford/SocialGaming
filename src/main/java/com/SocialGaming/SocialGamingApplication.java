@@ -1,7 +1,7 @@
 package com.SocialGaming;
 
 import com.SocialGaming.DiscordEvents.DiscordReadyEventListener;
-import com.SocialGaming.DiscordEvents.DiscordMessageEventListener;
+import com.SocialGaming.DiscordEvents.DiscordCommandsEventListener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.requests.GatewayIntent;
@@ -23,13 +23,8 @@ public class SocialGamingApplication {
 
 
 		JDA jda = jdaBuilder.enableIntents(GatewayIntent.MESSAGE_CONTENT, GatewayIntent.GUILD_MESSAGES)
-				.addEventListeners(new DiscordReadyEventListener(), new DiscordMessageEventListener())
+				.addEventListeners(new DiscordReadyEventListener(), new DiscordCommandsEventListener())
 				.build();
-
-
-
-
-		//jdaBuilder.build();
 	}
 
 }

@@ -1,6 +1,6 @@
 package com.SocialGaming.Controllers;
 
-import com.SocialGaming.Dao.Player;
+import com.SocialGaming.Dao.Models.Player;
 import com.SocialGaming.Dao.PlayerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
