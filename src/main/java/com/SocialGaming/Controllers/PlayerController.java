@@ -1,7 +1,7 @@
 package com.SocialGaming.Controllers;
 
-import com.SocialGaming.Dao.Models.Player;
-import com.SocialGaming.Dao.PlayerRepo;
+import com.SocialGaming.Dao.Models.User;
+import com.SocialGaming.Dao.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class PlayerController {
 
     @Autowired
-    PlayerRepo playerRepo;
+    UserRepo userRepo;
 
 
     @RequestMapping("/newPlayer")
     public String helloWorld(){
-        Player newPlayer = new Player("jefferyrutherford@outlook.com");
-        playerRepo.save(newPlayer);
+        User newPlayer = new User("jefferyrutherfordTestAgain@outlook.com");
+        userRepo.save(newPlayer);
         return "New Player";
     }
 

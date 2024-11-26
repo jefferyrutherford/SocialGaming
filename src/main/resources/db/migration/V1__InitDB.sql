@@ -33,6 +33,17 @@ create table format
 );
 
 
+create table tournament
+(
+    TournamentID  int auto_increment
+        primary key,
+    GameID        int      not null,
+    StartDateTime datetime null,
+    EndDateTime   datetime null,
+    constraint tournament_game_GameID_fk
+        foreign key (GameID) references game (GameID)
+);
+
 
 INSERT INTO user (Email) VALUE ('jeffTest@gmail.com');
 INSERT INTO game (Title, Rating, Genre) VALUE ('COD BLOPS6', 'M','Shooter');

@@ -5,15 +5,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Player {
+public class User {
     @Id
     private String email;
 
-    public Player(String email) {
+    public User(String email) {
         this.email = email;
     }
 
-    public Player() {
+    public User() {
 
     }
 
