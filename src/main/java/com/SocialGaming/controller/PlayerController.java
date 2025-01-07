@@ -1,7 +1,7 @@
-package com.SocialGaming.Controllers;
+package com.SocialGaming.controller;
 
-import com.SocialGaming.Dao.Models.User;
-import com.SocialGaming.Dao.UserRepo;
+import com.SocialGaming.dao.models.User;
+import com.SocialGaming.dao.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.SocialGaming.Dao.Models;
+package com.SocialGaming.dao.models;
 
 
 import jakarta.persistence.Entity;

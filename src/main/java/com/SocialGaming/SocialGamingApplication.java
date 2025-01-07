@@ -1,7 +1,7 @@
 package com.SocialGaming;
 
-import com.SocialGaming.DiscordEvents.DiscordReadyEventListener;
-import com.SocialGaming.DiscordEvents.DiscordCommandsEventListener;
+import com.SocialGaming.discordEvents.DiscordReadyEventListener;
+import com.SocialGaming.discordEvents.DiscordCommandsEventListener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.requests.GatewayIntent;
