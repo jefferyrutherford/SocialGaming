@@ -1,5 +1,11 @@
 version: '3.3'
 services:
+  redis:
+    hostname: 'redis'
+    image: 'redis/redis-stack-server:latest'
+    # ToDo: I can only connect to redis through localhost:58862 should figure this out.
+    ports:
+      - '6379:6379'
   db:
     image: mysql:latest
     restart: always
