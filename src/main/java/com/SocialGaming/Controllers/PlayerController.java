@@ -30,5 +30,10 @@ public class PlayerController {
         return userRepo.findAll();
     }
 
+    @RequestMapping("/tester")
+    public String tester() {
+        return "TESTER Lets Go!!!!!!!!!!1";
+    }
+
 
 }
