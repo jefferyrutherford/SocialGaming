@@ -8,15 +8,15 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.redis.core.RedisTemplate;
+//import org.springframework.data.redis.core.RedisTemplate;
 
 import javax.security.auth.login.LoginException;
 
 @SpringBootApplication
 public class SocialGamingApplication {
 
-    @Autowired
-    private RedisTemplate<String, String> redisTemplate;
+   /* @Autowired
+    private RedisTemplate<String, String> redisTemplate;*/
 
     public static void main(String[] args) throws LoginException {
 
