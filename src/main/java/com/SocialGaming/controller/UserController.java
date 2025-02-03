@@ -10,8 +10,8 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("User")
-public class PlayerController {
+@RequestMapping("user")
+public class UserController {
 
     @Autowired
     UserRepo userRepo;
