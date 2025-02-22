@@ -1,3 +1,4 @@
+/*
 package com.SocialGaming.config;
 
 import org.jetbrains.annotations.NotNull;
@@ -20,3 +21,4 @@ public class WebConfig implements WebMvcConfigurer {
             WebMvcConfigurer.super.addCorsMappings(registry);
     }
 }
+*/

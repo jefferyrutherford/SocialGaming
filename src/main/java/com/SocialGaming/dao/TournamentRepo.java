@@ -1,6 +1,6 @@
-package com.SocialGaming.Dao;
+package com.SocialGaming.dao;
 
-import com.SocialGaming.Dao.Models.Tournament;
+import com.SocialGaming.dao.models.Tournament;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TournamentRepo extends JpaRepository<Tournament, Integer> {

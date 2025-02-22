@@ -1,4 +1,4 @@
-package com.SocialGaming.Dao.Models;
+package com.SocialGaming.dao.models;
 
 
 import jakarta.persistence.Entity;
@@ -9,12 +9,19 @@ public class User {
     @Id
     private String email;
 
-    public User(String email) {
+    private String userID;
+
+    public User(String email, String userID) {
         this.email = email;
+        this.userID = userID;
     }
 
     public User() {
 
+    }
+
+    public User(String mail) {
+        this.email = mail;
     }
 
     public void setId(String email) {

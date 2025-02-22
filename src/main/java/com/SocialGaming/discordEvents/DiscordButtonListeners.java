@@ -1,4 +1,4 @@
-package com.SocialGaming.DiscordEvents;
+package com.SocialGaming.discordEvents;
 
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 

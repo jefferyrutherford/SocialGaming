@@ -1,10 +1,9 @@
-package com.SocialGaming.Controllers;
+package com.SocialGaming.controller;
 
-import com.SocialGaming.Dao.Models.Tournament;
-import com.SocialGaming.Dao.TournamentRepo;
-import com.SocialGaming.Dao.Models.User;
+import com.SocialGaming.dao.models.Tournament;
+import com.SocialGaming.dao.TournamentRepo;
+import com.SocialGaming.dao.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

@@ -1,6 +1,6 @@
-package com.SocialGaming.Dao;
+package com.SocialGaming.dao;
 
-import com.SocialGaming.Dao.Models.User;
+import com.SocialGaming.dao.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepo extends JpaRepository<User,String> {

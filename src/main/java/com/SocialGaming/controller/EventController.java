@@ -1,4 +1,4 @@
-package com.SocialGaming.Controllers;
+package com.SocialGaming.controller;
 
 
 import org.springframework.web.bind.annotation.RestController;
