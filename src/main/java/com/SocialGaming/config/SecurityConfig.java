@@ -18,8 +18,9 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/public/**").permitAll()      // No auth required
-                        .requestMatchers("/admin/**").hasAuthority("ROLE_ADMIN") // Role-based
+                        .requestMatchers("/public/**").permitAll()
+                        // ToDo add roles into the userTable.
+                        //.requestMatchers("/admin/**").hasAuthority("ROLE_ADMIN") // Role-based
                         .anyRequest().authenticated()                  // Auth required
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2
