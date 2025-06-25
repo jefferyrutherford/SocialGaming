@@ -1,13 +1,14 @@
-create table user
+create table User
 (
     Email  varchar(100) not null
         primary key,
     UserID int auto_increment,
+    LastLoggedIn DATETIME,
     constraint user_pk2
         unique (UserID)
 );
 
-create table game
+create table Game
 (
     Title  varchar(100) not null
         primary key,
@@ -19,7 +20,7 @@ create table game
 );
 
 
-create table format
+create table Format
 (
     Format   varchar(100)                   not null
         primary key,
@@ -29,11 +30,11 @@ create table format
     constraint format_pk
         unique (FormatID),
     constraint format_game_GameID_fk
-        foreign key (GameID) references game (GameID)
+        foreign key (GameID) references Game (GameID)
 );
 
 
-create table tournament
+create table Tournament
 (
     TournamentID  int auto_increment
         primary key,
@@ -41,10 +42,10 @@ create table tournament
     StartDateTime datetime null,
     EndDateTime   datetime null,
     constraint tournament_game_GameID_fk
-        foreign key (GameID) references game (GameID)
+        foreign key (GameID) references Game (GameID)
 );
 
 
-INSERT INTO user (Email) VALUE ('jeffTest@gmail.com');
-INSERT INTO game (Title, Rating, Genre) VALUE ('COD BLOPS6', 'M','Shooter');
-INSERT INTO format(Format, TeamSize, GameID) VALUE ('2v2', 2, 1);
+INSERT INTO User (Email) VALUE ('jeffTest@gmail.com');
+INSERT INTO Game (Title, Rating, Genre) VALUE ('COD BLOPS6', 'M','Shooter');
+INSERT INTO Format(Format, TeamSize, GameID) VALUE ('2v2', 2, 1);
