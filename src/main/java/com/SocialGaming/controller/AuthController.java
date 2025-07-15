@@ -22,8 +22,8 @@ public class AuthController {
     @Autowired
     UserService userService;
 
-    @PostMapping("/login")
-    public ResponseEntity<User> login() throws IOException, InterruptedException {
+    @PostMapping("/authenticated")
+    public ResponseEntity<User> authenticated() throws IOException, InterruptedException {
         try {
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             if (auth == null) {

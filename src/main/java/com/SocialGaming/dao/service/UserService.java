@@ -17,7 +17,7 @@ public class UserService {
 
     public com.SocialGaming.dao.model.DTO.User login(String email, String userID) {
         User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElse(signUp(email, userID));
 
         if (!Objects.equals(user.getUserID(), userID) || !Objects.equals(user.getEmail(), email)) {
             throw new RuntimeException("Wrong email or password");
@@ -27,6 +27,15 @@ public class UserService {
 
         userRepository.save(user);
         return new com.SocialGaming.dao.model.DTO.User(user.getUserID(), user.getEmail());
+    }
+
+    public User signUp(String email, String userID) {
+        try {
+            return userRepository.save(new User(email, userID));
+        }
+        catch (Exception e) {
+            throw new RuntimeException("Sign up failed for the new user: " + email);
+        }
     }
 }
 
