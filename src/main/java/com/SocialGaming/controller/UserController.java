@@ -1,5 +1,6 @@
 package com.SocialGaming.controller;
 
+import com.SocialGaming.dao.model.DTO.PlayerCardDTO;
 import com.SocialGaming.dao.model.User;
 import com.SocialGaming.dao.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,8 +41,8 @@ public class UserController {
     }
 
     @RequestMapping("/getPlayerCard")
-    public String getPlayerCard() {
-        return "test";
+    public PlayerCardDTO getPlayerCard() {
+        return new PlayerCardDTO("e10bb590-5051-7079-f569-96e8246c917c", 1, "slayer");
     }
 
 
