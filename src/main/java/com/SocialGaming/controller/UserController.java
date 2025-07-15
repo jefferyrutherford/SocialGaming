@@ -1,6 +1,6 @@
 package com.SocialGaming.controller;
 
-import com.SocialGaming.dao.models.User;
+import com.SocialGaming.dao.model.User;
 import com.SocialGaming.dao.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestHeader;

@@ -25,9 +25,9 @@ public class DiscordReadyEventListener implements EventListener {
         // if the
         if (event instanceof ReadyEvent) {
             System.out.print("The bot is online!");
-            InitAdminChannel(event.getJDA().getGuilds());
+            //InitAdminChannel(event.getJDA().getGuilds());
         } else if (event instanceof GuildJoinEvent) {
-            InitAdminChannel(event.getJDA().getGuilds());
+            //InitAdminChannel(event.getJDA().getGuilds());
         }
     }
 
