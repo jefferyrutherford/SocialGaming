@@ -35,6 +35,13 @@ public class User {
         this.userID = userID;
     }
 
+    /*
+    mappedBy = "user" tells Hibernate that PlayerCard owns the relationship
+    optional = true means a User may or may not have a PlayerCard
+     */
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, optional = true, fetch = FetchType.LAZY)
+    private PlayerCard playerCard;
+
     public User(String mail) {
         this.email = mail;
     }

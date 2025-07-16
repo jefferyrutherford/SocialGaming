@@ -2,7 +2,7 @@ create table User
 (
     Email  varchar(100) not null
         primary key,
-    UserID int auto_increment,
+    UserID VARCHAR(36),
     LastLoggedIn DATETIME,
     constraint user_pk2
         unique (UserID)
@@ -45,7 +45,7 @@ create table Tournament
         foreign key (GameID) references Game (GameID)
 );
 
-
-INSERT INTO User (Email) VALUE ('jeffTest@gmail.com');
+## just to have my aws account preloaded into the db.
+INSERT INTO User (Email, UserID) VALUE ('jefferyrutherford@outlook.com', 'e10bb590-5051-7079-f569-96e8246c917c');
 INSERT INTO Game (Title, Rating, Genre) VALUE ('COD BLOPS6', 'M','Shooter');
 INSERT INTO Format(Format, TeamSize, GameID) VALUE ('2v2', 2, 1);
