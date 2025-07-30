@@ -20,7 +20,7 @@ git clone git@github.com:jefferyrutherford/SocialGaming.git
 chmod +x ./mvnw
 ./mvnw clean package
 
-echo "Branch Checked Out: " "$(git branch)"
+echo "Branch Checked Out: $(git branch)"
 #swap to dev branch
 
 #setting the profile to test for now and skipping tests, my tests arent aware of what profile to use yet.
@@ -33,12 +33,12 @@ cd .
 curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo bash -
 sudo yum install -y nodejs
 
-echo "Node Version: " "${node -v}"
-echo "NPM Version: " "${npm -v}"
+echo "Node Version: $(node -v)"
+echo "NPM Version: $(npm -v)"
 
 sudo npm install -g @angular/cli
 
-echo "Angular CLI Version: " "${ng version}"
+echo "Angular CLI Version: $(ng version)"
 
 # generate an sshkey and add it to git if not already
 # this is needed for the git clone to work properly and authenticate the ec2 user with github

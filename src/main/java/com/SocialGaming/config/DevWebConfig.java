@@ -11,16 +11,25 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Configuration
+//ToDo look into @Order here to prioritize this over another config bean. Not sure if needed but want to understand better
 @Profile({"dev"})
 public class DevWebConfig {
 
+    @Value("${cors.allowed-origins}")
+    private String AllowedOrigins;
+
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
+
+        List<String> allowedOrigins = Arrays.asList(AllowedOrigins.split(","));
+
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("http://localhost:4200", "http://localhost:8081", "http://192.168.1.205:8081/"));
+        config.setAllowedOrigins(allowedOrigins);
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
