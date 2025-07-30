@@ -11,4 +11,9 @@ public class PublicController {
     public String test() {
         return "Hello Admin World";
     }
+
+    @GetMapping("/testFail")
+    public String fail() {
+        throw new RuntimeException("fail() endpoint");
+    }
 }
