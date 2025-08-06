@@ -21,14 +21,14 @@ public class SocialGamingApplication {
     public static void main(String[] args) throws LoginException {
 
         SpringApplication.run(SocialGamingApplication.class, args);
-
-        final String TOKEN = "MTE0Mzc0NDY3MTIzNTk3NzI4Nw.Gy-OPs.53JhurRc5rQkbEuaMczFjdbRp3pEmJWappbfew";
-        final String SERVER_ID = "1143758964065054820";
+/*
+        final String TOKEN = "**";
+        final String SERVER_ID = "**";
         JDABuilder jdaBuilder = JDABuilder.createDefault(TOKEN);
 
 
         JDA jda = jdaBuilder.enableIntents(GatewayIntent.MESSAGE_CONTENT, GatewayIntent.GUILD_MESSAGES)
                 .addEventListeners(new DiscordReadyEventListener(), new DiscordCommandsEventListener())
-                .build();
+                .build();*/
     }
 }
